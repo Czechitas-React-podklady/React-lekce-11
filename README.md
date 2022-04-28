@@ -25,10 +25,10 @@ npm install react-router-dom
 Z knihovny musíme do aplikace naimportovat potřebné komponenty:
 ```jsx
 import {
-	BrowserRouter,
-	Routes,
-	Route,
-	Link
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
 } from 'react-router-dom';
 ```
 
@@ -43,16 +43,16 @@ Struktura naší aplikace tedy bude vypadat zhruba takto:
 
 ```jsx
 const App = () => {
-	return (
-		<BrowserRouter>
-			<h1>Naše aplikace</h1>
-			<Routes>
-				<Route path="/" element={ <Uvod /> }>
-				<Route path="/onas" element={ <Onas /> }>
-				<Route path="/produkty" element={ <Produkty /> }>
-			</Routes>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <h1>Naše aplikace</h1>
+      <Routes>
+        <Route path="/" element={ <Uvod /> }>
+        <Route path="/onas" element={ <Onas /> }>
+        <Route path="/produkty" element={ <Produkty /> }>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 ```
 
@@ -95,7 +95,7 @@ Dynamickou část adresy v React Routeru nastavíme takto:
 
 ```jsx
 <Routes>
-	<Route path="/clanek/:id" element={ <Clanek /> }>
+  <Route path="/clanek/:id" element={ <Clanek /> }>
 </Routes>
 ```
 
@@ -107,11 +107,11 @@ Uvnitř komponenty k parametru přistoupíme pomocí hooku `useParams`, který s
 import {useParams} from 'react-router-dom';
 
 const Clanek = () => {
-	const { id } = useParams();
+  const { id } = useParams();
 
-	return (
-		<p>Zobrazujeme článek č. {id}</p>
-	);
+  return (
+    <p>Zobrazujeme článek č. {id}</p>
+  );
 }
 ```
 
